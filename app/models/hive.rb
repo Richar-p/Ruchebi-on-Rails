@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: hives
@@ -10,10 +12,8 @@
 #  updated_at  :datetime         not null
 #
 class Hive < ApplicationRecord
-
   validates :name, presence: true
   validates :name, length: { maximum: 6 }
 
   validates :weight, presence: true
-
 end

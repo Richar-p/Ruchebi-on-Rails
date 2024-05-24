@@ -34,13 +34,15 @@ group :development, :test do
   gem 'rspec-rails', '~> 6.1'
   gem 'shoulda-matchers', '~> 6.2'
 
+  # For Mocking
+  gem 'faker', '~> 3.3'
+
   # Linter
+  gem 'rubocop-factory_bot', '~> 2.25'
   gem 'rubocop-rails', '~> 2.25'
   gem 'rubocop-rspec', '~> 2.29'
   gem 'rubocop-rspec_rails', '~> 2.28'
-  gem 'rubocop-factory_bot', '~> 2.25'
 
   # Annotations
-  gem "annotate", "~> 3.2"
+  gem 'annotate', '~> 3.2'
 end
-
