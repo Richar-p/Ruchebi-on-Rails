@@ -1,6 +1,26 @@
 # Test technique Scalingo
 
-# 
+# Comment lancer le projet
+
+## Avec docker
+
+### Requis :
+- Docker
+
+Pour build et lancer le projet :
+```shell
+docker compose up --build -d
+```
+
+Pour voir les logs de l'application :
+```shell
+docker compose logs app
+```
+
+Pour voir les logs de la base de données :
+```shell
+docker compose logs database
+```
 
 # Reflexion et choix technique
 
@@ -24,3 +44,9 @@ Les choix qui ont été fait sont :
 - Validation du nom pour sa longeur, mais aussi sa présence.
 - Utilisation d'un float pour le poids, afin de l'afficher en kg.
 - Validation de présence et de longeur testé avec Rspec et Shoulda-Matchers.
+
+## Création du controller Hives
+
+Les routes requises étaient index, show et create.
+Pour le rendu j'ai choisi d'utiliser jbuilder, afin de garder ma partie rendu séparé de ma partie logique.
+Toutes les routes ont un test de leur controller.
