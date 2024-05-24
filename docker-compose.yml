@@ -1,0 +1,36 @@
+version: '3.7'
+
+services:
+  app:
+    image: ruchebionrails:dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - database
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/rails
+    environment:
+      RAILS_ENV: development
+      URL: http://0.0.0.0:3000
+      DATABASE_HOST: database
+      DATABASE_NAME: postgres
+    stdin_open: true
+    tty: true
+
+  database:
+    image: postgres:15-alpine
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+      LC_COLLATE: 'en_US.UTF-8'
+      LC_CTYPE: 'en_US.UTF-8'
+
+
+volumes:
+  db_data:
