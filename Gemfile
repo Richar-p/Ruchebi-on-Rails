@@ -39,4 +39,8 @@ group :development, :test do
   gem 'rubocop-rspec', '~> 2.29'
   gem 'rubocop-rspec_rails', '~> 2.28'
   gem 'rubocop-factory_bot', '~> 2.25'
+
+  # Annotations
+  gem "annotate", "~> 3.2"
 end
+
