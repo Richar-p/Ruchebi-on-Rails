@@ -2,6 +2,8 @@
 
 # Ressource controller for the Hive model.
 class HivesController < ApplicationController
+  include ApplicationHelper
+
   def index
     @hives = Hive.all
   end

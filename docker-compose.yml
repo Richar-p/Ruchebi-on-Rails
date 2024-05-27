@@ -31,6 +31,16 @@ services:
       LC_COLLATE: 'en_US.UTF-8'
       LC_CTYPE: 'en_US.UTF-8'
 
+  vue:
+    image: ruchebionrails-vue:dev
+    build:
+      context: ./vuejs
+      dockerfile: Dockerfile
+    ports:
+      - '4000:4000'
+    volumes:
+      - ./vuejs:/vue
+
 
 volumes:
   db_data:

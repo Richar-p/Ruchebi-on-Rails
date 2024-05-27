@@ -13,3 +13,5 @@ AllCops:
     - 'db/schema.rb'
     # Same for binaries
     - 'bin/*'
+    # Excluding vue folder
+    - 'vuejs/**/*'
