@@ -5,7 +5,6 @@
 ## Avec docker
 
 ### Requis :
-- Docker
 
 Pour build et lancer le projet :
 ```shell
@@ -50,3 +49,24 @@ Les choix qui ont été fait sont :
 Les routes requises étaient index, show et create.
 Pour le rendu j'ai choisi d'utiliser jbuilder, afin de garder ma partie rendu séparé de ma partie logique.
 Toutes les routes ont un test de leur controller.
+
+## Création du front-end
+
+Afin de me faciliter la tache pour le routing notamment, j'ai choisi d'utiliser le framework NuxtJS.
+Pour compléter le framework, j'ai utiliser les deux modules :
+- Nuxt/UI, qui est le module natif utilisant TailwindCSS pour les components
+- Nuxt/Image, qui facilite la gestion des tailles d'image pour le logo.
+
+En plus de ses outils j'ai utilisé Dall-E IA pour générer le logo.
+
+Dans les différents choix technique que j'ai pu faire il y a eu :
+- L'utilisation d'un devproxy pour faciliter le lien vers l'API depuis Docker
+- L'utilisation de TypeScript, seul langage supporté pour certain component de NuxtUI
+- Gestion d'erreurs en Backend, pour éviter une redondance
+- Désactivation du SSR (server side rendering) pour que la manipulation de donnée ne cause une erreur
+- Pagination et recherche en front directement, pour simplifier la logique du backend, éviter un grand nombre de requête. Ce choix est aussi dû au fait que les modèles actuellement présent dans le back sont léger actuellement.
+
+###### Note personnelle : Première fois que j'utilise un framework front en JS et clairement une bonne expérience, agréable !
+
+##### Merci beaucoup à la personne qui fera une review de ce projet 🥳
+
